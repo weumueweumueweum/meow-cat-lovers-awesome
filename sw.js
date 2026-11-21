@@ -2,9 +2,9 @@
 // stays small: the worker itself (app serving + prxy) is fetched from jsDelivr at install time.
 // The inline copy below only runs if every CDN mirror is unreachable.
 var SOURCES = [
-  "https://cdn.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3@main/assets/prox/sw-app.js?v=20261115-1",
-  "https://gcore.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3@main/assets/prox/sw-app.js?v=20261115-1",
-  "https://fastly.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3@main/assets/prox/sw-app.js?v=20261115-1"
+  "https://cdn.jsdelivr.net/gh/weumueweumueweum/meow-cat-lovers-awesome@main/assets/prox/sw-app.js?v=20261115-1",
+  "https://gcore.jsdelivr.net/gh/weumueweumueweum/meow-cat-lovers-awesome@main/assets/prox/sw-app.js?v=20261115-1",
+  "https://fastly.jsdelivr.net/gh/weumueweumueweum/meow-cat-lovers-awesome@main/assets/prox/sw-app.js?v=20261115-1"
 ];
 
 var loaded = false;
@@ -18,7 +18,7 @@ for (var i = 0; i < SOURCES.length; i++) {
 
 if (!loaded) {
   try {
-    importScripts("https://cdn.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3@main/assets/prox/t4k7m.js?v=20261022-3");
+    importScripts("https://cdn.jsdelivr.net/gh/weumueweumueweum/meow-cat-lovers-awesome@main/assets/prox/t4k7m.js?v=20261022-3");
   } catch (e) {}
 
   var APP_PATHNAME = new URL("ubzlol", self.registration.scope).pathname;
@@ -26,7 +26,7 @@ if (!loaded) {
     return new URL(name, self.registration.scope).pathname;
   });
   var APP_HTML = new URL("index.html?v=20261114-1", self.registration.scope).href;
-  var CDN_APP_HTML = "https://cdn.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3@main/index.html?v=20261114-1";
+  var CDN_APP_HTML = "https://cdn.jsdelivr.net/gh/weumueweumueweum/meow-cat-lovers-awesome@main/index.html?v=20261114-1";
 
   self.addEventListener("fetch", function (event) {
     if (event.request.mode !== "navigate") return;
